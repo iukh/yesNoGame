@@ -1,0 +1,34 @@
+<div class="overlay"> </div>
+
+<div class="confirmationPopOp">
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+    <div class="modal-title">
+      <h2>Create a new situation puzzle</h2>
+    </div>
+    <div class="modal-content">
+    <div class="inputControl">
+      <label for="puzzleTitle">Title: </label>
+      <input id="puzzleTitle" type="text" class="form-control" formControlName="title" placeholder="">
+    </div>
+      <div>
+        <label >Category:
+        <select class="" id="" formControlName="sectionId" (change)="onChange($event.target.value)">
+          <option *ngFor="let item of sections" id="{{item._id}}" value={{item._id}} > {{item.sectionName|uppercase}}<option>
+        </select>
+        </label>
+      </div>
+    <div class="inputControl">
+      <label for="puzzleText">Situation puzzle's question</label>
+      <textarea id="puzzleText" class="form-control" formControlName="text" placeholder=""></textarea>
+    </div>
+    <div class="inputControl">
+      <label for="answer">Situation puzzle's answer</label>
+      <textarea id="answer" class="form-control" formControlName="answer" placeholder=""></textarea>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" name="button" class="cancel" (click)="closePopup()">Cancel</button>
+      <button type="button" name="button" class="create" type="submit">Create pazzle</button>
+    </div>
+  </form>
+</div>

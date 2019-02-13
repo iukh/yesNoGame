@@ -1,0 +1,88 @@
+.confirmationPopOp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 840px;
+  height: 600px;
+  margin: 50px auto;
+  background-color: white;
+  border: none;
+  padding: 50px 40px;
+  z-index: 6;
+  opacity: 1;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding: 30px 20px;
+    overflow: auto;
+    margin: 0;
+  }
+}
+.overlay {
+  position: fixed;
+  background-color: black;
+  z-index: 3;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.cancel {
+  background-color: white;
+  color: black;
+}
+.create {
+  background-color: black;
+  color: white;
+}
+.modal-title {
+  font-size: 20px;
+  padding: 15px;
+}
+.modal-footer {
+ display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0;
+}
+button {
+  border-radius: 25px;
+  height: 56px;
+  padding: 0 34px;
+  border: 2px solid #000000;
+  font-size: 20px;
+  margin: 0 10px;
+}
+input,
+select {
+  height: 48px;
+  padding: 0 10px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #e9e9e9;
+  margin: 10px 0;
+  width: 97%;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+  padding: 10px 10px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #e9e9e9;
+  margin: 10px 0;
+  width: 97%;
+}
+select,
+option {
+  font-size: 16px;
+  font-weight: 700;
+}

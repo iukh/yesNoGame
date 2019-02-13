@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <app-game-rules></app-game-rules>
+  <div class="container">
+    <div class="sections_container">
+      <h1> All categories</h1>
+      <hr>
+      <div class="sections">
+        <a *ngFor="let section of sections">{{section.sectionName}}</a>
+      </div>
+    </div>
+  </div>
+  <button class="button" (click)="activatePopup()">
+    Add a new situation
+  </button>
+</div>
+
+<ng-container *ngIf = "isPopUpActive">
+  <app-article-popup (isPopUpActive)='changePopupStatus($event)'></app-article-popup>
+</ng-container>

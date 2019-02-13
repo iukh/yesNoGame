@@ -1,0 +1,15 @@
+<h1>All situation puzzles</h1>
+<div class="wrapper">
+  <div class="container" *ngFor="let article of articles"  id="{{article._id}}">
+    <div class="title">
+      <h2>{{article.title}}</h2>
+    </div>
+    <div class="articleCard">
+      <div class="article__text">{{article.text}}</div>
+      <hr>
+      <div class="buttons">
+        <button type="button" name="button" class="details" [routerLink]= "[ '/stories',article._id]">More details</button>
+      </div>
+    </div>
+  </div>
+</div>
