@@ -1,10 +1,10 @@
 <div class="container">
   <div class="form">
     <ul class="tab-group">
-      <li class="tab active">
+      <li class="tab" [class.active]="!isLoginFormActive">
         <a (click)="setLoginButtonClicked(false)">Sign Up</a>
       </li>
-      <li class="tab">
+      <li class="tab" [class.active]="isLoginFormActive">
         <a (click)="setLoginButtonClicked(true)">Log In</a>
       </li>
     </ul>

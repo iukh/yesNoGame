@@ -1,6 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormGroup, FormBuilder, Validators, FormControl, ValidationErrors } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from '../../models/user';
@@ -64,26 +63,4 @@ export class LoginComponent implements OnInit {
           }
         );
   }
-
-  // loginUser (user) {
-  //   return this.userService.loginUser({
-  //     username: user.email,
-  //     password: user.password
-  //   }).subscribe(
-  //     suc => {
-  //       console.log(suc);
-  //       this.isLoggedIn = true;
-  //       if (suc.isAdmin) {
-  //         this.router.navigate(['/admin']);
-  //       } else {
-  //         this.router.navigate(['/main']);
-  //       }
-  //     },
-  //     err => {
-  //       console.log("ERROR!!!");
-  //       console.log(err);
-  //     }
-  //   );
-  // }
-
 }

@@ -1,3 +1,29 @@
-<p>
-  category-details works!
-</p>
+<div class="container">
+  <div class="activeSections section">
+    <h2>Active categories</h2>
+    <div class="sectionCard" *ngFor="let activeSection of activeSections">
+      <div class="">
+        {{activeSection.sectionName | uppercase}}
+      </div>
+      <div class="buttons">
+        <button type="button" name="button" class="block">Block</button>
+        <button type="button" name="button" class="remove">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="plannedSections section">
+    <h2>Planned categories</h2>
+    <div class="center plannedSections" *ngIf="plannedSections.length==0">There are no requests for creating sections</div>
+    <div class="sectionCard" *ngFor="let plannedSection of plannedSections">
+      <div class="">
+        {{plannedSection.sectionName | uppercase}}
+      </div>
+      <div class="buttons">
+        <button type="button" name="button" class="block">Block</button>
+        <button type="button" name="button" class="remove">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

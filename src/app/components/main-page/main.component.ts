@@ -13,9 +13,7 @@ export class MainComponent implements OnInit {
   constructor(private sectionService: SectionService) { }
   ngOnInit() {
     this.getSections();
-    console.log(this.sections);
   }
-
   getSections() {
     return this.sectionService.getSections().subscribe(sections => {
       this.sections = sections;
