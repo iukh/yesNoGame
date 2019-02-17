@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  font-family: 'Titillium Web', sans-serif;
+  background-size: cover;
+  background-color: #000000c2;
+  height: 100%;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @media (max-width: 500px) { padding: 0 };
+}
+.menu {
+  padding: 10px 0;
+  background-color: #026f79;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.menu button {
+  padding: 10px 15px;
+  font-size: 20px;
+  margin: 10px auto;
+  background: #026f79;
+  color: white;
+  border: none;
+}
+.menu button:hover {
+  background-color: black;
+  color: white;
+}
+app-user-details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="background">
+    <div class="">
+      <div class="menu">
+        <button type="button" name="button" id="users" (click)="setCurrentTabValue(0)">Users</button>
+        <button type="button" name="button" id="articles" (click)="setCurrentTabValue(1)">Articles</button>
+        <button type="button" name="button" id="requests" (click)="setCurrentTabValue(2)">Sections</button>
+        <button type="button" name="button" routerLink='/home'>Main</button>
+      </div>
+      <div class="content">
+        <app-user-details *ngIf="currentTab==0"></app-user-details>
+        <app-category-details *ngIf="currentTab==2"></app-category-details>
+        <app-articles-admin *ngIf="currentTab==1"></app-articles-admin>
+      </div>
+    </div>
+  </div>
+</div>

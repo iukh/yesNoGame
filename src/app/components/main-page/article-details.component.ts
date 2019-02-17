@@ -10,6 +10,8 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 })
 export class ArticleDetailsComponent implements OnInit {
   currentArticle: Article = null;
+  isAnswerHidden = true;
+  buttonName = 'Show answer';
   articleId = this.router.snapshot.params['id'];
   constructor(private articleService: ArticleService,
               private router: ActivatedRoute) {}
@@ -20,5 +22,13 @@ export class ArticleDetailsComponent implements OnInit {
     return this.articleService.getArticleById(id).subscribe(article => {
       this.currentArticle = article;
     });
+  }
+  showAnswer() {
+    this.isAnswerHidden = !this.isAnswerHidden;
+    if (this.isAnswerHidden) {
+      this.buttonName = 'Show answer';
+    } else {
+      this.buttonName = 'Hide answer';
+    }
   }
 }

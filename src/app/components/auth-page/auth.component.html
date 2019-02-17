@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="form">
+    <ul class="tab-group">
+      <li class="tab active">
+        <a (click)="setLoginButtonClicked(false)">Sign Up</a>
+      </li>
+      <li class="tab">
+        <a (click)="setLoginButtonClicked(true)">Log In</a>
+      </li>
+    </ul>
+    <div class="tab-content" >
+      <app-registration *ngIf="!isLoginFormActive"></app-registration>
+      <app-login *ngIf="isLoginFormActive"></app-login>
+    </div>
+  </div>
+</div>

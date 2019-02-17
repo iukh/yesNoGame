@@ -25,6 +25,10 @@ const customerSchema =  new Schema({
   status: {
     type: String,
     default: "Active"
+  },
+  photoURL: {
+    type: String,
+    default: "src/app/images/anonim.png"
   }
 });
 customerSchema.methods.validPassword = function( pwd ) {

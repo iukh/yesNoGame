@@ -6,6 +6,10 @@
       <h2>Create a new situation puzzle</h2>
     </div>
     <div class="modal-content">
+      <div class="inputValidationError" *ngIf="isControlInvalid('title')||isControlInvalid('sectionId')||isControlInvalid('text')||isControlInvalid('answer')">
+        <p>Please fill out all required fields</p>
+        <!--<li>Please fill all mandatory fields</li>-->
+      </div>
     <div class="inputControl">
       <label for="puzzleTitle">Title: </label>
       <input id="puzzleTitle" type="text" class="form-control" formControlName="title" placeholder="">

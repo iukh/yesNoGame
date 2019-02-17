@@ -44,6 +44,7 @@ export class ArticlePopupComponent implements OnInit {
     return this.articleService.addArticle(article).subscribe(
       suc => {
         console.log(suc);
+        this.closePopup();
       },
       err => {
         console.log('ERROR!!!');

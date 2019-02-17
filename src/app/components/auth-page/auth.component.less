@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  font-family: 'Titillium Web', sans-serif;
+  background-size: cover;
+  background-color: #000000c2;
+  height: 100%;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @media (max-width: 500px) { padding: 0 };
+}
+.form {
+  background: white;
+  padding: 40px;
+  max-width: 500px;
+  margin: 0px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  @media (max-width: 500px) {
+    border-radius: 0;
+    padding: 10px;
+    height: 100%;
+  }
+}
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #191919;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+  border: 1px solid #4c4343;
+}
+.tab-group li a:hover {
+  background: #026f79;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #191919;
+  color: #ffffff;
+}
+.tab-content > div:last-child {
+  display: none;
+}
+

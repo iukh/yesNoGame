@@ -6,7 +6,8 @@
         <a class="item" routerLink='/home'>Home</a>
         <a class="item" routerLink='/stories'>All pazzles</a>
         <a class="item" routerLink='/rules'>Rules</a>
-        <a class="item">Logout</a>
+        <a class="item" *ngIf="isAdmin=='true'" routerLink='/admin'>Admin page</a>
+        <a class="item" routerLink='/auth'>Logout</a>
       </nav>
       <button class="toggle">
         <span class="icon"></span>

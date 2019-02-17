@@ -12,8 +12,10 @@ mongoose.connect('mongodb://admin:admin123@ds127995.mlab.com:27995/pazzle-db',{ 
 
 const sectionRouter = require('./routers/sections.js')
 const articleRouter = require('./routers/articles.js')
+const userRouter = require('./routers/users.js')
 app.use("/api/sectionManagement",sectionRouter)
 app.use("/api/articleManagement",articleRouter)
+app.use("/api/customerManagement",userRouter)
 
 app.listen(port,() => {
   console.log(`Server has been started on the port ${port}`)

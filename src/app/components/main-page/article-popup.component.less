@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   width: 840px;
-  height: 600px;
+  height: 650px;
   margin: 50px auto;
   background-color: white;
   border: none;
@@ -16,7 +16,7 @@
     width: 100%;
     height: auto;
     min-height: 100%;
-    padding: 30px 20px;
+    padding: 0;
     overflow: auto;
     margin: 0;
   }
@@ -43,6 +43,10 @@
 .modal-title {
   font-size: 20px;
   padding: 15px;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 .modal-footer {
  display: flex;
@@ -68,6 +72,7 @@ select {
   background-color: #e9e9e9;
   margin: 10px 0;
   width: 97%;
+  box-sizing: content-box;
 }
 
 textarea {
@@ -80,9 +85,30 @@ textarea {
   background-color: #e9e9e9;
   margin: 10px 0;
   width: 97%;
+  box-sizing: content-box;
 }
 select,
 option {
   font-size: 16px;
   font-weight: 700;
+}
+
+
+form input.ng-touched.ng-invalid,
+form select.ng-touched.ng-invalid,
+form textarea.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.inputValidationError {
+  text-align: center;
+  background-color: #f7dcdf;
+  padding: 10px;
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 auto;;
+}
+.inputValidationError p {
+  margin-bottom: 5px;
 }

@@ -1,0 +1,14 @@
+<div id="login">
+  <h1>Welcome Back!</h1>
+  <form  [formGroup]="userData" (ngSubmit)="onSubmit()" class="articleCreate">
+    <div class="inputValidationError" *ngIf="isControlInvalid('email')||isControlInvalid('password')">
+      <p>You must fill in all of the fields</p>
+    </div>
+    <div class="inputValidationError" *ngIf="!isCustomerExist">
+      <p>Incorrect email or password</p>
+    </div>
+    <input type="email" required autocomplete="off" pattern="[^ @]*@[^ @]*" title="Required email format: xxx@xxx.xxx" placeholder="Email Address" name="login_email" formControlName="email">
+    <input type="password" required autocomplete="off" placeholder="Enter password" name="login_password" formControlName="password">
+    <button type="submit" class="button-block" name="button">Log in</button>
+  </form>
+</div>

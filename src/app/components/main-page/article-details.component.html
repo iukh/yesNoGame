@@ -2,10 +2,12 @@
   <div class="container">
     <div class="sections_container" *ngFor="let article of currentArticle">
         <h1>{{article.title}}</h1>
-        <label>Story:</label>
-        <textarea id="articleText">{{article.text}}</textarea>
-        <label>Answer:</label>
-        <textarea id="articleAnswer">{{article.answer}}</textarea>
+        <div id="articleText" class="text">{{article.text}}</div>
+
+      <button class="button" (click)="showAnswer()">{{buttonName}}</button>
+        <div id="articleAnswer" class="text" *ngIf="!isAnswerHidden">{{article.answer}}</div>
     </div>
   </div>
 </div>
+
+<app-article-comments></app-article-comments>

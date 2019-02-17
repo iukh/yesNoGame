@@ -1,0 +1,12 @@
+<div class="userCard" *ngFor="let user of users">
+  <h2 class="">
+    {{user.name}}
+  </h2>
+  <div class="photo"></div>
+  <div>{{user.email}}</div>
+  <div class="">
+    Registered: {{user.dateCreated | date:"dd/MM/yyyy"}}
+  </div>
+  <button type="button" name="button" class="edit">Edit</button>
+  <button type="button" name="button" class="remove removeUser" (click)="deleteUser(user)">Delete</button>
+</div>
