@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators, FormControl, ValidationErrors } fro
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class RegistrationComponent implements OnInit {
   user: User;
   constructor(private fb: FormBuilder,
               private userService: UserService,
-              private router: Router) { }
+              private router: Router,
+              private cookieService: CookieService) { }
   ngOnInit() {
     this.initForm();
   }
@@ -57,6 +59,8 @@ export class RegistrationComponent implements OnInit {
       suc => {
         console.log('SUCCESS')
         this.user = suc;
+        this.cookieService.set('userId', suc._id);
+        this.cookieService.set('isAdmin', `${suc.isAdmin}`);
         console.log(this.user);
         this.router.navigate(['/home']);
       },
