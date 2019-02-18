@@ -5,7 +5,7 @@
       <h1> All categories</h1>
       <hr>
       <div class="sections">
-        <a *ngFor="let section of sections">{{section.sectionName}}</a>
+        <a *ngFor="let section of sections" routerLink='/stories'>{{section.sectionName}}</a>
       </div>
     </div>
   </div>
