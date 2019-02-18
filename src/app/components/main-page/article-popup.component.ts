@@ -15,7 +15,6 @@ import { SectionService } from '../../services/section.service';
 export class ArticlePopupComponent implements OnInit {
   articleForm: FormGroup;
   sections: Section[] = [];
-  selectedSectionId: string;
   constructor(private fb: FormBuilder,
               private articleService: ArticleService,
               private sectionService: SectionService) { }
