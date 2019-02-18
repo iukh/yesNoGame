@@ -7,15 +7,16 @@ import { ArticlesComponent } from './components/main-page/articles.component';
 import { ArticleDetailsComponent } from './components/main-page/article-details.component';
 import { AuthComponent } from './components/auth-page/auth.component';
 import { AdminComponent } from './components/admin-page/admin.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 const routes: Routes = [
-  {path: 'home', component: MainComponent},
+  {path: 'home', component: MainComponent, canActivate: [AuthGuardGuard]},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'auth', component: AuthComponent},
-  {path: 'stories', component: ArticlesComponent},
-  {path: 'stories/:id', component: ArticleDetailsComponent},
-  {path: 'rules', component: GameRulesComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'stories', component: ArticlesComponent, canActivate: [AuthGuardGuard]},
+  {path: 'stories/:id', component: ArticleDetailsComponent, canActivate: [AuthGuardGuard]},
+  {path: 'rules', component: GameRulesComponent, canActivate: [AuthGuardGuard]},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuardGuard]},
   {path: 'page-not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: 'page-not-found'}
 ];
