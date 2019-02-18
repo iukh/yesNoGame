@@ -1,4 +1,11 @@
 <h1>All situation puzzles</h1>
+<div class="filter">
+  <select class="" id="">
+    <option *ngFor="let item of sections" id="{{item._id}}" value={{item._id}}> {{item.sectionName|uppercase}}<option>
+    <option selected>All Categories<option>
+  </select>
+  <button class="apply">Apply</button>
+</div>
 <div class="wrapper">
   <div class="container" *ngFor="let article of articles"  id="{{article._id}}">
     <div class="title">
