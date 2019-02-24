@@ -62,6 +62,7 @@ export class RegistrationComponent implements OnInit {
         this.cookieService.set('userId', suc._id);
         this.cookieService.set('isAdmin', `${suc.isAdmin}`);
         console.log(this.user);
+        this.userService.changeUserStatus(false);
         this.router.navigate(['/home']);
       },
       err => {
