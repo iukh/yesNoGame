@@ -53,13 +53,15 @@ export class LoginComponent implements OnInit {
             this.cookieService.set('isAdmin',`${suc.isAdmin}`);
             if (suc.isAdmin) {
               this.router.navigate(['/admin']);
+              this.userService.changeUserStatus(true);
             } else {
               this.router.navigate(['/home']);
+              this.userService.changeUserStatus(false);
             }
           },
           err => {
             console.log('ERROR!!!'),
-            this.isCustomerExist = false
+            this.isCustomerExist = false;
           }
         );
   }
