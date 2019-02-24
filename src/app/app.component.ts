@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-project';
+  userRole = false;
+  changeUserStatus(value) {
+    this.userRole = value;
+    console.log('event here' + value);
+  }
 }
