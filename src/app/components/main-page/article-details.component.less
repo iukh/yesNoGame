@@ -1,15 +1,16 @@
+@dark_color: #491249;
+@light_color: #f95d6261;
 .wrapper {
   text-align: center;
 }
 .sections_container {
   margin: 30px auto;
-  background-color: white;
+  background-color: #f3f2f18c;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   max-width: 1100px;
   text-align: center;
-  padding: 30px;
   justify-content: center;
 }
 
@@ -19,30 +20,58 @@
 }
 
 h1 {
-  margin: 20px;
+  padding: 20px;
+  background-color: #ab0a1059;
 }
 
 button {
-  width: auto;
-  margin: 20px auto;
-  padding: 15px 35px;
-  background-color: #026f79;
+  margin: 10px auto;
+  padding: 8px 20px;
+  border: 2px solid @dark_color;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 18px;
+  background: white;
+  color:@dark_color;
 }
 button:hover {
-  background-color: #026f79;
-  color: white;
+  background-color: @light_color;
 }
 .text {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 26px;
   text-align: left;
   @media (max-width: 500px) {font-size: 16px;};
-  background-color: #e6e0e0;
   padding: 20px;
 }
  #articleText {
-   background-color: #fbd9d9;
  }
  #articleAnswer {
-   background-color: #d9ecdc;
  }
+.statistic {
+  background-color: white;
+}
+.share {
+  background-color: #a79e9e59;
+}
+.share_title {
+  font-weight: bold;
+}
+.statistic {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding: 20px;
+  @media(max-width: 500px) {
+    flex-direction: column;
+  }
+}
+.statistic_title {
+  color: red;
+  font-weight: bold;
+}
+.share div {
+  padding: 10px;
+}
