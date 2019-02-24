@@ -1,6 +1,10 @@
+@button_color: #491249;
+@light_color: #f5b8ba;
+@dark_color: #491249;
+
 h1 {
   margin: 30px 5px;
-  color: white;
+  color: @dark_color;
   text-align: center;
 }
 .wrapper {
@@ -17,16 +21,15 @@ h1 {
 
 .articleCard {
   width: 300px;
-  height: 120px;
-  background-color: white;
+  background-color: #f8f8f8;
   margin: 0 5px 5px 5px;
   padding: 20px;
   color: black;
   display: inline-block;
-  border: 1px solid #05393e;
+  box-shadow:  0 0 9px rgba(0, 0, 0, 0.16) inset;
 }
 .article__text {
-  height: 80px;
+  max-height: 150px;
   overflow: hidden;
   margin-bottom: 5px;
 }
@@ -35,23 +38,24 @@ h1 {
 }
 
 .details {
-  background-color: #026f79;
-  color: white;
-  padding: 10px 20px;
-  border: none;
   margin-top: 10px;
-  border-radius: 20px;
+  background: none;
+  padding: 12px 22px;
+  border: 2px solid @button_color;
+  color: @button_color;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .details:hover {
-  color: white;
-  background-color: black;
+  background-color: @light_color;
 }
 .title {
-  background-color: #ffffff;
-  color: #05393e;
+  background-color: #ab0a1059;
+  color: @dark_color;
   margin: 0 5px;
   padding: 20px;
-  border: 2px solid #05393e;
 }
 .filter {
   margin: 10px;
@@ -64,12 +68,28 @@ select {
   padding: 10px;
   width: 300px;
   margin-right: 10px;
-  border: none;
 }
+
 .apply {
-  padding: 10px;
-  background-color: black;
-  color: white;
-  border: none;
   width: 150px;
+  padding: 8px 20px;
+  border: 2px solid @dark_color;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background: white;
+  color:@dark_color;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+img {
+  width: 30px;
+  height: 30px;
 }
