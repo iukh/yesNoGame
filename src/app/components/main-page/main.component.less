@@ -1,10 +1,12 @@
+@light_color: #f95d6261;
+@dark_color: #491249;
 .wrapper {
   text-align: center;
 }
 .container {
-  margin: 30px auto;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  //background-color: white;
+  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   max-width: 1100px;
@@ -13,29 +15,28 @@
 }
 h1 {
   margin: 20px auto;
-  color: #026f79;
+  color: @dark_color;
 }
 p {
   margin: 20px;
 }
 button {
-  width: auto;
   margin: 20px auto;
-  padding: 15px 35px;
 }
 
 a {
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #ffffff9e;
   color: #05393e;
   margin: 10px 10px;
   font-size: 20px;
   text-transform: uppercase;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 2px solid black;
+  width: 300px;
 }
 a:hover,a:active {
-  background-color: #026f79;
+  background-color: @light_color;
 }
 
 .sections_container {
@@ -48,4 +49,19 @@ a:hover,a:active {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.game_rules {
+  background-color: @light_color;
+  padding: 20px 0;
+}
+
+.btn {
+  padding: 12px 22px;
+  border: 2px solid @dark_color;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 18px;
+  background: @light_color;
+  color:@dark_color;
 }
