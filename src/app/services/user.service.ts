@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import { map, catchError} from 'rxjs/operators';
+import {EventEmitter} from '@angular/core';
 import { User } from '../models/user';
 
 const httpOptions = {
@@ -12,6 +12,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
+  isCurrentUserAdmin: EventEmitter<boolean> = new EventEmitter();
+  changeUserStatus(value: boolean) {
+    this.isCurrentUserAdmin.emit(value);
+  }
 
   constructor(private http: HttpClient) { }
   addUser (user: User): Observable<User> {
