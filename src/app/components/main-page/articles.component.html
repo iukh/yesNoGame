@@ -6,6 +6,7 @@
   </select>
   <button class="apply" (click) = filterArticles()>Apply</button>
 </div>
+<div class="emptySection" *ngIf="!articles.length"> There are no articles for this section yet </div>
 <div class="wrapper">
   <div class="container" *ngFor="let article of articles"  id="{{article._id}}">
     <div class="title">
