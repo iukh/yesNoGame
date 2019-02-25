@@ -27,4 +27,9 @@ router.post("/article", jsonParser, async function(req, res){
   await newArticle.save();
 });
 
+router.get("/section/:sectionId/articles", async function(req, res){
+  const articles = await Article.find({sectionId: req.params.sectionId});
+  res.status(200).json(articles);
+});
+
 module.exports = router;
