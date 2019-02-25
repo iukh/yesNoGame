@@ -11,6 +11,7 @@ import { SectionService } from '../../services/section.service';
 export class ArticlesComponent implements OnInit {
   articles: Article[] = [];
   sections: Section[];
+  selectedSectionId: string;
   constructor(private articleService: ArticleService,
               private sectionService: SectionService) { }
   ngOnInit() {
@@ -27,5 +28,22 @@ export class ArticlesComponent implements OnInit {
       this.sections = sections;
       console.log(this.sections);
     });
+  }
+  getArticlesUnderSection(sectionId) {
+    return this.articleService.getArticlesUnderSection(sectionId).subscribe(articles => {
+      this.articles = articles;
+    });
+  }
+  onChange(selectedSection) {
+    this.selectedSectionId = selectedSection;
+    console.log(this.selectedSectionId);
+  }
+  filterArticles() {
+    console.log('filter here');
+    if (this.selectedSectionId === 'all') {
+      this.getArticles();
+    } else {
+      this.getArticlesUnderSection(this.selectedSectionId);
+    }
   }
 }
