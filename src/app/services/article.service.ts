@@ -23,4 +23,7 @@ export class ArticleService {
   getArticleById(id: string): Observable<Article> {
     return this.http.get<Article>(`http://localhost:3000/api/articleManagement/article/${id}`);
   }
+  getArticlesUnderSection(sectionId: string): Observable<Array<Article>> {
+    return this.http.get<Array<Article>>(`http://localhost:3000/api/articleManagement/section/${sectionId}/articles`);
+  }
 }
