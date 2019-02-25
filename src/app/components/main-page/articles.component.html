@@ -1,10 +1,10 @@
 <h1>All situation puzzles</h1>
 <div class="filter">
-  <select class="" id="">
+  <select class="" id="" (change)="onChange($event.target.value)">
     <option *ngFor="let item of sections" id="{{item._id}}" value={{item._id}}> {{item.sectionName|uppercase}}<option>
-    <option selected>All Categories<option>
+    <option value="all" selected>All Categories<option>
   </select>
-  <button class="apply">Apply</button>
+  <button class="apply" (click) = filterArticles()>Apply</button>
 </div>
 <div class="wrapper">
   <div class="container" *ngFor="let article of articles"  id="{{article._id}}">
