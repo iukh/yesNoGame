@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
             }
           },
           err => {
-            console.log('ERROR!!!'),
+            console.log('ERROR!!!');
             this.isCustomerExist = false;
           }
         );
